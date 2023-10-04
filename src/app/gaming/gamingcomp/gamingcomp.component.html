@@ -1,0 +1,9 @@
+<div class="cardContainer">
+  <div class="card" style="width: 16rem" *ngFor="let item of gamingList">
+    <img [src]="item.imgUrl" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ item.title }}</h5>
+      <p class="card-text">{{ item.description }}</p>
+    </div>
+  </div>
+</div>
