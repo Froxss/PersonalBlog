@@ -16,6 +16,6 @@ export class CardGridComponent {
   booksList: any[] = this.dataShareService.booksList;
 
   ngOnInit(): void {
-    this.dataShareService.separateDataByCategory();
+    //this.dataShareService.separateDataByCategory();
   }
 }

@@ -12,6 +12,6 @@ export class DesigncompComponent {
   designList: any[] = this.dataShareService.designList;
 
   ngOnInit(): void {
-    this.dataShareService.separateDataByCategory();
+    //this.dataShareService.separateDataByCategory();
   }
 }

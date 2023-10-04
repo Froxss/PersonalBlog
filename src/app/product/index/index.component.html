@@ -1,0 +1,43 @@
+<div class="container">
+    <!-- <div class="product" *ngFor="let product of products">
+        <div>id: {{product.id}}</div>
+        <div>title: {{product.title}}</div>
+        <div>description: {{product.description}}</div>
+        <div>price: {{product.price}}</div>
+        <div>thumbnail: {{product.thumbnail}}</div>
+    </div> -->
+    <table>
+        <thead>
+            <tr>
+                <th>Resim</th>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products" [routerLink]="['/urunler', product.id]">
+                <td>
+                    <img height="100" [src]="product.thumbnail">
+                </td>
+                <td>{{product.id}}</td>
+                <td>{{product.title}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.price}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- id: number;
+title: string;
+description: string;
+price: number;
+discountPercentage: number;
+rating: number;
+stock: number;
+brand: string;
+category: string;
+thumbnail: string;
+images: string[]; -->

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
@@ -428,28 +428,43 @@ export class DatashareService {
   programmingList: any[] = [];
   mixList: any[] = this.cardList;
 
-  constructor() {}
+  constructor() {
+    console.log('datashare service');
+
+    this.booksList = this.cardList.filter(f=> f.Category == 'books');
+    this.cgiList = this.cardList.filter(f=> f.Category == 'cgi');
+    this.programmingList = this.cardList.filter(f=> f.Category == 'programming');
+    this.gamingList = this.cardList.filter(f=> f.Category == 'gaming');
+    this.designList = this.cardList.filter(f=> f.Category == 'design');
+    this.reverseCardList();
+  }
 
   ngOnInit(): void {
-    this.reverseCardList();
-    this.separateDataByCategory();
+    console.log('datashare ngOnInit');
+    // this.separateDataByCategory();
   }
 
-  separateDataByCategory() {
-    this.cardList.forEach((item) => {
-      if (item.Category === 'books') {
-        this.booksList.push(item);
-      } else if (item.Category === 'cgi') {
-        this.cgiList.push(item);
-      } else if (item.Category === 'programming') {
-        this.programmingList.push(item);
-      } else if (item.Category === 'gaming') {
-        this.gamingList.push(item);
-      } else if (item.Category === 'design') {
-        this.designList.push(item);
-      }
-    });
-  }
+  // separateDataByCategory() {
+  //   this.booksList = [];
+  //   this.cgiList = [];
+  //   this.programmingList = [];
+  //   this.gamingList = [];
+  //   this.designList = [];
+
+  //   this.cardList.forEach((item) => {
+  //     if (item.Category === 'books') {
+  //       this.booksList.push(item);
+  //     } else if (item.Category === 'cgi') {
+  //       this.cgiList.push(item);
+  //     } else if (item.Category === 'programming') {
+  //       this.programmingList.push(item);
+  //     } else if (item.Category === 'gaming') {
+  //       this.gamingList.push(item);
+  //     } else if (item.Category === 'design') {
+  //       this.designList.push(item);
+  //     }
+  //   });
+  // }
 
   reverseCardList() {
     this.cardList.reverse();

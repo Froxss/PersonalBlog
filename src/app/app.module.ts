@@ -11,6 +11,7 @@ import { GamingModule } from './gaming/gaming.module';
 import { ProgrammingModule } from './programming/programming.module';
 import { CardGridComponent } from './card-grid/card-grid.component';
 import { NavbarcompComponent } from './navbarcomp/navbarcomp.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, CardGridComponent, NavbarcompComponent],
@@ -22,7 +23,7 @@ import { NavbarcompComponent } from './navbarcomp/navbarcomp.component';
     DesignModule,
     GamingModule,
     ProgrammingModule,
-
+    HttpClientModule,
     AppRoutingModule,
   ],
   providers: [DatashareService],

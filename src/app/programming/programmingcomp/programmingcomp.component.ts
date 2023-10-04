@@ -10,6 +10,6 @@ export class ProgrammingcompComponent {
   programmingList: any[] = this.dataShareService.programmingList;
 
   ngOnInit(): void {
-    this.dataShareService.separateDataByCategory();
+    //this.dataShareService.separateDataByCategory();
   }
 }

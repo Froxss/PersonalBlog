@@ -12,6 +12,6 @@ export class CgicompComponent {
   cgiList: any[] = this.dataShareService.cgiList;
 
   ngOnInit(): void {
-    this.dataShareService.separateDataByCategory();
+    //this.dataShareService.separateDataByCategory();
   }
 }
